@@ -49,7 +49,7 @@ def csv_fft(in_file, out_file):
 
 
 # 関数を実行してcsvファイルをフーリエ変換するだけの関数を実行
-df, df_fft = csv_fft(in_file='V1499_120K_0V_MEM.csv', out_file='V1499_120K_0V_MEM_fft.csv')
+df, df_fft = csv_fft(in_file='V1532_signal_abe.csv', out_file='V1532_signal_abe_fft.csv')
 
 # フォントの種類とサイズを設定する。
 plt.rcParams['font.size'] = 14
@@ -100,8 +100,8 @@ size = len(df.T) - 1
 for i in range(size):
     ax1.plot(df.T.iloc[0], df.T.iloc[i + 1], label=df.columns[i + 1], lw=1)
     ax2.plot(df_fft.T.iloc[0], df_fft.T.iloc[i + 1], label=df_fft.columns[i + 1], lw=1)
-    ax3.plot(df_fft.T.iloc[0], df_fft.T.iloc[i + 2], label=df_fft.columns[i + 2], lw=1)
-    ax4.plot(df_fft.T.iloc[0], df_fft.T.iloc[i + 3], label=df_fft.columns[i + 3], lw=1)
+    ax3.plot(df_fft.T.iloc[0], df_fft.T.iloc[i + 17], label=df_fft.columns[i + 17], lw=1)
+    ax4.plot(df_fft.T.iloc[0], df_fft.T.iloc[i + 32], label=df_fft.columns[i + 32], lw=1)
 #ax1.legend(loc='upper right', bbox_to_anchor=(1, 1))
 #ax2.legend()
 #ax3.legend()
